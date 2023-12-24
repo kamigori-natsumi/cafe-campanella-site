@@ -1,0 +1,710 @@
+@charset "utf-8";
+
+:root {
+    --maincolor: #FFF5D1;
+    --subcolor01: #8AB3DB;
+    --subcolor02: #DE995E;
+    --accentcolor: #D7415E;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Zen Maru Gothic', serif;
+}
+
+img {
+    width: 100%;
+}
+
+.fit {
+    object-fit: cover;
+}
+
+.tytleWrapper {
+    text-align: center;
+    padding: 3rem;
+
+    @media(max-width:500px) {
+        padding: 2rem;
+    }
+}
+
+#logo-container{
+    width: 200px;
+      @media(max-width:500px) {
+        width:100px;
+    }
+}
+
+.tytle {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--accentcolor);
+    width: fit-content;
+    margin: 0 auto;
+    display: inline;
+
+    @media(max-width:500px) {
+        font-size: 1.5rem;
+    }
+
+}
+
+.tytle2 {
+    color: white;
+}
+
+.star {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+
+}
+
+.shooting {
+    animation: fadeInTopRight 1s ease-in-out;
+}
+
+@keyframes fadeInTopRight {
+    from {
+        opacity: 0;
+        transform: translate(50%, -50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+body {
+    background-color: var(--maincolor);
+
+    & header {
+        color: var(--accentcolor);
+
+        & nav {
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            
+            .navCotaints {
+                display: flex;
+                gap: 2rem;
+                margin-bottom: 1rem;
+                font-weight: bold;
+                font-size: 1.5rem;
+
+                @media(max-width:900px) {
+                    display: none;
+
+                }
+                .logo-contaner{
+                    width: 150px;
+                    & img{
+                        width: 150px;
+                    }
+                }
+            }
+
+            & a {
+                display: inline-block;
+                position: relative;
+                overflow: hidden;
+                color: var(--accentcolor);
+                text-decoration: none;
+            }
+
+            & a:after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: var(--accentcolor);
+                transform: translate(-100%, 0);
+                transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+                content: "";
+            }
+
+            & a:hover:after {
+                transform: translate(0, 0);
+
+            }
+        }
+    }
+}
+
+
+/* ーーーーーーーーーメインビジュアルーーーーーーーーー */
+.swiper {
+    /*スライダーの幅と高さを調整*/
+    width: 100%;
+    max-width: 1240px;
+
+    .swiper-wrapper {
+        margin-bottom: 2rem;
+        transition-timing-function: linear;
+
+        .swiper-slide {
+            /*スライド要素の幅と高さを調整*/
+            width: 100%;
+            height: 100%;
+
+
+            & img {
+                object-fit: cover;
+                height: 300px;
+            }
+        }
+    }
+}
+
+.slideRelative1 {
+    position: relative;
+}
+
+.textOverlay1 {
+    font-size: 1.5rem;
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    color: white;
+}
+
+.textOverlay2 {
+    font-size: 1.5rem;
+    writing-mode: vertical-rl;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: white;
+}
+
+.meltWrapper{
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    & div{
+        margin-bottom: 2rem;
+    & img{
+        max-width: 500px;
+        border-radius: 5px;
+    }
+    
+}}
+
+
+/* ーーーーーーーーー本日出勤の文鳥たちーーーーーーーーー */
+#attend {
+    background-color: var(--subcolor01);
+    margin-bottom: 5rem;
+}
+
+#image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.image-wrapper {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    animation: fade-in 1s ease-out;
+    transition: transform 0.5s ease-out;
+
+    & img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+        max-width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        @media(max-width:900px) {
+            width: 150px;
+            height: 150px;
+        }
+
+        @media(max-width:500px) {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+.image-wrapper:hover {
+    transform: translateY(-10px);
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.image-wrapper p {
+    margin: 0;
+}
+
+/* wave01 */
+.container1 {
+    position: relative;
+    background: var(--subcolor01);
+    height: 10vh;
+}
+
+.wave1 {
+    position: absolute;
+    height: 61px;
+    width: 100%;
+    background: var(--subcolor01);
+    bottom: 0;
+}
+
+.wave1::before,
+.wave1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+}
+
+.wave1::before {
+    width: 53.5%;
+    height: 109%;
+    background-color: var(--maincolor);
+    right: 0;
+    top: 60%;
+}
+
+.wave1::after {
+    width: 55%;
+    height: 100%;
+    background-color: var(--subcolor01);
+    left: -1.5%;
+    top: 40%;
+}
+
+/* wave2 */
+.container2 {
+    position: relative;
+    background: var(--maincolor);
+
+}
+
+.wave2 {
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    background: var(--maincolor);
+    bottom: 0;
+}
+
+.wave2::before,
+.wave2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+}
+
+.wave2::before {
+    width: 53.5%;
+    height: 109%;
+    background-color: var(--subcolor01);
+    right: 0;
+    top: 60%;
+}
+
+.wave2::after {
+    width: 55%;
+    height: 100%;
+    background-color: var(--maincolor);
+    left: -1.5%;
+    top: 40%;
+}
+
+/* ーーーーーーーーーNewsーーーーーーーーー */
+#news {
+    padding-bottom: 5rem;
+
+    & dl {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: var(--subcolor02);
+        padding: 3rem;
+        text-align: center;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        border: 0.5px solid black;
+
+        @media(max-width:900px) {
+            flex-direction: column;
+            align-items: center;
+            max-width: 700px;
+            padding: 1rem 1rem 0;
+        }
+
+        & dt {
+            width: 20%;
+            line-height: 1.8;
+
+            @media(max-width:900px) {
+                width: 100%;
+                line-height: 1;
+            }
+        }
+
+        & dd {
+            width: 80%;
+            text-align: left;
+            line-height: 1.8;
+
+            @media(max-width:900px) {
+                width: 100%;
+                text-align: center;
+                line-height: 1;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .shere {
+
+
+        .zoom {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1rem;
+            transition-duration: .4s;
+        }
+
+        .zoom:hover {
+            transform: scale(1.15);
+        }
+    }
+}
+
+
+
+.snsWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    @media(max-width:900px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/* ーーーーーーーーーStaffーーーーーーーーー */
+#staff {
+    background-color: var(--subcolor01);
+    padding: 5rem 0;
+
+    .staffWrapper {
+        background-color: white;
+        max-width: 900px;
+        margin: 0 auto;
+        border-radius: 10px;
+        @media(max-width:900px) {
+            margin: 0 1rem;
+        }
+
+        @media(max-width:500px) {
+            margin: 0 1rem;
+        }
+
+        & ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            @media(max-width:500px) {
+                flex-direction: column;
+
+            }
+
+
+            & li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 45%;
+                padding: 2rem;
+                margin: 0 auto;
+                gap: 2rem;
+
+                @media(max-width:500px) {
+                    justify-content: center;
+                    width: 80%;
+                }
+
+
+                & img {
+                    min-width: 200px;
+                    max-width: 200px;
+                    /* 最低でも200pxの幅を確保 */
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    transition-duration: .4s;
+
+                    @media(max-width:900px) {
+                        max-width: 100px;
+                    }
+
+                }
+
+                & img:hover {
+                    transform: scale(1.1);
+                }
+
+                & h3 {
+                    font-size: 1.2rem;
+                    margin-bottom: 0.5rem;
+                    color: var(--subcolor02);
+                    font-weight: bold;
+                    text-align: center;
+                }
+
+                .staffText {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+/* ーーーーーーーーーMenuーーーーーーーーー */
+#menu {
+    padding-bottom: 3rem;
+
+}
+
+.menuWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 2px double var(--accentcolor);
+    border-radius: 10px;
+
+    @media(max-width:500px) {
+        font-size
+    }
+
+}
+
+dt {
+    width: 65%;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+
+}
+
+dd {
+    width: 35%;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.swiper2 {
+    /*スライダーの幅と高さを調整*/
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: 300px;
+    margin-bottom: 2rem;
+
+    .swiper-wrapper {
+        margin-bottom: 2rem;
+        transition-timing-function: linear;
+
+
+        .swiper-slide {
+            /*スライド要素の幅と高さを調整*/
+            width: 100%;
+            height: 100%;
+
+
+            & img {
+                object-fit: cover;
+                width: 500px;
+                
+            }
+        }
+    }
+
+    .swiper-button-prev {
+        color: var(--maincolor);
+    }
+
+    .swiper-button-next {
+        color: var(--maincolor);
+    }
+}
+
+
+/* ーーーーーーーーーMapーーーーーーーーー */
+#map {
+    background-color: var(--subcolor01);
+
+    .mapWrapper {
+        & dl {
+            background-color: var(--subcolor02);
+            border-radius: 10px;
+            border: 0.5px solid black;
+            padding: 1rem;
+            width: 100%;
+            max-width: 450px;
+            display: flex;
+            flex-wrap: wrap;
+
+            margin: 0 auto;
+            margin-bottom: 2rem;
+
+
+            & dt {
+                width: 30%;
+            }
+
+            & dd {
+
+                width: 70%;
+            }
+        }
+
+        .mapimage {
+            aspect-ratio: 3/2;
+            max-width: 900px;
+            margin: 0 auto;
+
+            & iframe {
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+
+/* ーーーーーーーーーFooterーーーーーーーーー */
+footer {
+    position: relative;
+
+    & ul {
+        position: absolute;
+        top: 60%;
+        left: 48%;
+        transform: translate(-50%, -50%);
+        display: flex;
+
+        @media(max-width:900px) {
+            display: none;
+            ;
+        }
+
+        & li {
+            padding: 1rem;
+            color: var(--accentcolor);
+            font-size: 1.5rem;
+        }
+    }
+}
+
+/* アコーディオン */
+
+.accordionLogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: -300px;
+    /* 初期はビューポートの上に隠れるように */
+    left: 0;
+    width: 100%;
+    transition: top 0.3s ease-in-out;
+    z-index: 1000;
+    /* 他の要素よりも上に表示するため */
+    padding: 2rem;
+}
+
+.accordionLogo img {
+    width: 150px;
+
+    @media(max-width:500px) {
+        width: 70px;
+    }
+}
+
+.accordion {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+font-size: 1.2rem;
+        line-height: 2;
+        width: 200px;
+
+}
+
+.accordion-item {
+    display: none;
+    color: var(--accentcolor);
+    font-weight: bold;
+    background-color: #ffffffb9;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    /* 最初は非表示にする */
+}
+
+/* ローディングアニメーション */
+#loading {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background-color: var(--maincolor);
+    z-index: 100000;
+}
+
+video {
+    width: 100%;
+    /* 動画サイズがPCフルスクリーンより小さいので無理やり伸ばしてます。 */
+    height: 100vh;
+    z-index: 100001;
+}
+
+
+/* JSで付与するクラス。これによってクラスloading_bgが指定されている要素が消える */
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+
+}

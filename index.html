@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/destyle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- スワイパー -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Zen+Maru+Gothic:wght@500&display=swap"
+        rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <div id="loading">
+        <video autoplay loop playsinline muted src="img/imac.mp4"></video>
+    </div>
+
+    <main>
+        <header>
+            <nav>
+                <ul class="navCotaints">
+                    <li><a href="#">Top</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#staff">Staff</a></li>
+                </ul>
+                <div id="logo-container">
+                    <img src="img/logo.svg" alt="ロゴ" id="logo">
+                </div>
+
+                <ul class="navCotaints">
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#map">Access map</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Sliderを包むコンテナ要素 -->
+        <div class="swiper">
+            <!-- スライド要素を包む要素 -->
+            <div class="swiper-wrapper">
+                <!-- 各スライド -->
+                <div class="swiper-slide slideRelative1">
+                    <p><img src="img/mochisakura.jpg" alt="メインビジュアル"></p>
+                    <p class="textOverlay1">溶ける文鳥カフェ</p>
+                    <p class="textOverlay2">僕たちは液体</p>
+                </div>
+                <div class="swiper-slide">
+                    <p><img src="img/mochisakura2.jpg" alt="メインビジュアル"></p>
+                </div>
+
+                <div class="swiper-slide">
+                    <p><img src="img/cream2.jpg" alt="メインビジュアル"></p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="accordionLogo">
+            <h1 onclick="toggleAccordion()"><img src="img/logo.svg" alt="ロゴ" id="logo2"></h1>
+            <div class="accordion" id="accordionContent">
+                <ul class="accordion-item">
+                    <li><a href="#">Top</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#staff">Staff</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#map">Access map</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="meltWrapper">
+            <div><img src="img/befor.png" alt=""></div>
+            <div><img src="img/before2.png" alt=""></div>
+            <p>★リラックス空間で一緒にのんびり過ごしませんか★<br>
+            溶けるがテーマのお食事や、お客様の手の中で溶けていく僕たちをお楽しみください!</p>
+        </div>
+
+        <div id="attend">
+            <div class="tytleWrapper">
+                <div class="star starLeft"><img src="img/star.svg" alt=""></div>
+                <h2 class="tytle tytle2">本日出勤の文鳥たち</h2>
+                <div class="star starRight"><img src="img/star.svg" alt=""></div>
+            </div>
+            <div id="image-container">
+                <!-- ここに画像が表示されます -->
+            </div>
+            <div class="container1">
+                <div class="wave1"></div>
+            </div>
+        </div>
+
+        <section id="news">
+            <div class="tytleWrapper">
+                <div class="star starLeft"><img src="img/star.svg" alt=""></div>
+                <h2 class="tytle">News</h2>
+                <div class="star starRight"><img src="img/star.svg" alt=""></div>
+            </div>
+            <dl>
+                <dt>【2023年11月1日】</dt>
+                <dd>11月25日（土）、11月26日（日）ハンドメイド文鳥アクセサリー販売</dd>
+                <dt>【2023年11月5日】</dt>
+                <dd>ラテアート始めました</dd>
+            </dl>
+
+            <div class="shere">
+
+                <div class="zoom">
+                    <img src="img/banner.png" alt="バナー">
+
+                </div>
+
+                <div class="snsWrapper">
+                    <div class="twitter">
+                        <a class="twitter-timeline" data-width="300" data-height="470"
+                            href="https://twitter.com/ingwaz_?ref_src=twsrc%5Etfw">Tweets by ingwaz_</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+
+                    <div class="tiktok">
+                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@muu_daybyday"
+                            data-unique-id="muu_daybyday" data-embed-type="creator"
+                            style="max-width: 300px; min-width: 300px;">
+                            <div> <a target="_blank"
+                                    href="https://www.tiktok.com/@muu_daybyday?refer=creator_embed">@muu_daybyday</a>
+                            </div>
+                        </blockquote>
+                        <script async src="https://www.tiktok.com/embed.js"></script>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <div class="container2">
+            <div class="wave2"></div>
+        </div>
+
+        <section id="staff">
+            <div class="tytleWrapper">
+                <div class="star starLeft"><img src="img/star.svg" alt=""></div>
+                <h2 class="tytle tytle2">Staff</h2>
+                <div class="star starRight"><img src="img/star.svg" alt=""></div>
+            </div>
+
+            <div class="staffWrapper">
+                <ul>
+                    <li>
+                        <div><img src="img/tentyo.jpg" alt="店長の写真" class="fit"></div>
+                        <div class="staffText">
+                            <h3>店長 チュン太郎</h3>
+                            <p>ノーマル文鳥。
+                                自家焙煎のコーヒーを推している。
+                                最近の悩みはエゴサした時に関連で「もしかして：焼き鳥」と出てくること。
+                                手に抱くとすぐに溶けます。</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div><img src="img/nikki.jpg" alt="ニッキの写真"></div>
+                        <div class="staffText">
+                            <h3>ニッキ</h3>
+                            <p>シナモン文鳥。ちょっぴりシャイなので優しくしてあげてください。店長に続く溶け度なので、慣れるとめちゃくちゃ溶けてくれます。</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div><img src="img/sakura.jpg" alt="サクラの写真"></div>
+                        <div class="staffText">
+                            <h3>サクラ</h3>
+                            <p>桜文鳥。都会に憧れるボーイ。家にサングラスが20個位ある。
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div><img src="img/cream.jpg" alt="もかの写真"></div>
+                        <div class="staffText">
+                            <h3>もか</h3>
+                            <p>クリーム文鳥。新人（鳥）。毛並みに自信あり。褒めて撫でてあげると喜びます。いっぱいモフってね！
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div><img src="img/mochi.jpg" alt="おもちの写真"></div>
+                        <div class="staffText">
+                            <h3>おもち</h3>
+                            <p>白文鳥。アルビノ文鳥の「おじき」に親父ギャグバトルを持ちかけがち。
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div><img src="img/arubino.jpg" alt="おじきの写真"></div>
+                        <div class="staffText">
+                            <h3>おじき</h3>
+                            <p>アルビノ文鳥。おじきって名前だけど実は最年少。ワイルドでクールなキャラを装っていますが実は情に熱い男。ドラマの最終回は必ず泣く。
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="menu">
+            <div class="tytleWrapper">
+                <div class="star starLeft"><img src="img/star.svg" alt=""></div>
+                <h2 class="tytle">Menu</h2>
+                <div class="star starRight"><img src="img/star.svg" alt=""></div>
+            </div>
+            <!-- Sliderを包むコンテナ要素 -->
+            <div class="swiper2">
+                <!-- スライド要素を包む要素 -->
+                <div class="swiper-wrapper">
+                    <!-- 各スライド -->
+                    <div class="swiper-slide">
+                        <p><img src="img/omu.jpg" alt="メニュー"></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p><img src="img/hamburg.jpg" alt="メニュー"></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p><img src="img/sand.jpg" alt="メニュー"></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p><img src="img/parfe.jpg" alt="メニュー"></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p><img src="img/cake.jpg" alt="メニュー"></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p><img src="img/late.jpg" alt="メニュー"></p>
+                    </div>
+                </div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+           
+
+
+            <div>
+                <dl class="menuWrapper">
+                    <dt>★★メニュー★★</dt>
+                    <dd>価格（税込）</dd>
+                    <dt>とろけるデミオムライス</dt>
+                    <dd>800円</dd>
+                    <dt>ホットサンド</dt>
+                    <dd>700円</dd>
+                    <dt>とろけるチーズハンバーク定食</dt>
+                    <dd>1200円</dd>
+                    <dt>「おもち」と「おじき」の苺大福</dt>
+                    <dd>300円（お茶付き）</dd>
+                    <dt>文鳥のミニパフェ</dt>
+                    <dd>700円</dd>
+                    <dt>文鳥ケーキ</dt>
+                    <dd>700円</dd>
+                    <dt>昔ながらのパンケーキ</dt>
+                    <dd>700円</dd>
+                    <dt>店長自慢の自家焙煎コーヒー</dt>
+                    <dd>500円</dd>
+                    <dt>文鳥ラテアート</dt>
+                    <dd>600円</dd>
+                </dl>
+            </div>
+
+        </section>
+
+        <section id="map">
+            <div class="tytleWrapper">
+                <div class="star starLeft"><img src="img/star.svg" alt=""></div>
+                <h2 class="tytle tytle2">Access map</h2>
+                <div class="star starRight"><img src="img/star.svg" alt=""></div>
+            </div>
+            <div class="mapWrapper">
+                <dl>
+                    <dt>店名 : </dt>
+                    <dd>Cafe Campanella</dd>
+                    <dt>Tel : </dt>
+                    <dd>000-0000-0000</dd>
+                    <dt>住所 : </dt>
+                    <dd>
+                        〒650-0002<br>
+                        兵庫県神戸市中央区北野町１丁目１−３</dd>
+                    <dt>定休日 : </dt>
+                    <dd>不定休</dd>
+                    <dt>営業時間 : </dt>
+                    <dd>11:00-20:00</dd>
+                </dl>
+
+                <div class="mapimage"><iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.2311523951107!2d135.19049577520593!3d34.69934928328625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008ee71dee802f%3A0xca14a9adc4e242db!2z44CSNjUwLTAwMDIg5YW15bqr55yM56We5oi45biC5Lit5aSu5Yy65YyX6YeO55S677yR5LiB55uu77yR4oiS77yTIO-8rO-8pe-8peODu--8qO-8pe-8qe-8rQ!5e0!3m2!1sja!2sjp!4v1700355560621!5m2!1sja!2sjp"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            </div>
+
+        </section>
+        <div class="slide-in-image"><img src="img/melt.svg" alt=""></div>
+
+        <footer>
+            <ul>
+                <li><a href="#">Top</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#staff">Staff</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#map">Access map</a></li>
+            </ul>
+            <div><img src="img/footer.svg" alt=""></div>
+        </footer>
+    </main>
+
+
+
+
+    <!-- スライドショー -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/common.js"></script>
+
+</body>
+
+</html>
